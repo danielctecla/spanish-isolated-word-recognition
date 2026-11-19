@@ -45,9 +45,20 @@ Dataset propio (equipo) ──┤
 | `reports/` | Resultados y figuras |
 | `docs/` | Documentación |
 
+## Uso
+
+Requiere [uv](https://docs.astral.sh/uv/). El proyecto usa Python 3.12 porque MSWC se carga con un script de Hugging Face que solo funciona con `datasets<4`.
+
+```bash
+uv sync                     # crea .venv e instala dependencias
+uv run --group dev pytest   # pruebas
+```
+
+MSWC (`MLCommons/ml_spoken_words`, configuración `es_wav`) se lee en streaming por defecto, sin guardarlo en disco. Si se descarga (`streaming=False`), la caché va a `data/cache/` (~15 GB comprimidos el español completo).
+
 ## Estado
 
-- [ ] Preprocesamiento ← siguiente
+- [ ] Preprocesamiento: ~~mono~~, ~~offset DC~~, ~~16 kHz~~, ruido, normalizar
 - [ ] Extracción de características
 - [ ] Modelos acústicos
 - [ ] Léxico, modelo de lenguaje y decodificador
