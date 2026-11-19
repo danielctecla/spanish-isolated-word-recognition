@@ -1,0 +1,15 @@
+# Datos y artefactos (se conservan solo las carpetas)
+data/**
+!data/**/
+!data/**/.gitkeep
+models/**
+!models/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Claude Code (ajustes locales)
+.claude/settings.local.json
