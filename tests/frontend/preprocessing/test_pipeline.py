@@ -13,3 +13,4 @@ def test_stereo_48k_with_offset():
     assert sample_rate == 16_000
     assert signal.shape == (16_000,)
     assert abs(signal.mean()) < 1e-3
+    assert np.abs(signal).max() == 1.0

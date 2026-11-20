@@ -20,8 +20,8 @@ uv run --group dev pytest
 
 ## Estado
 
-- [x] Preprocesamiento: mono, offset DC, remuestreo a 16 kHz
-- [ ] Preprocesamiento: ruido, normalización
+- [x] Preprocesamiento: mono, offset DC, remuestreo a 16 kHz, normalización
+- [ ] Preprocesamiento: ruido
 - [ ] Características
 - [ ] Modelos acústicos
 - [ ] Decodificador
